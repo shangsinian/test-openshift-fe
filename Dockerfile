@@ -6,5 +6,5 @@ RUN mkdir -p /var/nodejs
 ADD . /var/nodejs
 WORKDIR  /var/nodejs
 RUN npm install
-EXPOSE 9000
+EXPOSE 8080
 ENTRYPOINT ["node", "index.js"]

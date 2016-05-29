@@ -5,7 +5,7 @@ var app = express();
 
 var Service = require('./thriftService');
 //port set
-app.set('port', 9000);
+app.set('port', 8080);
 
 //view engine
 app.set('view engine', 'ejs');
