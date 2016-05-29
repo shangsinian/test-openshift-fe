@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test-openshift-frontend</title>
+</head>
+<body>
+	<input type="text" id="num1"></input>
+	<input type="text" id="num2"></input>
+	<button id="submit">提交</button>
+	<p id="result"></p>
+	
+	<script type="text/javascript" src="/js/jquery.js"></script>
+	<script>
+		$('#submit').on('click',function(){
+			var num1 = parseInt($('#num1').val())
+			var num2 = parseInt($('#num2').val())
+		    $.ajax({
+	            type: "POST",
+	            url: "/api/cal",
+	            data: {num1:num1,num2:num2},
+	            dataType:"json",
+	            success: function(res){
+	                $('#result').text(res.result)
+	            },
+	            error: function(err){
+	                console.log(err);
+	            }
+	        });
+		});
+	</script>
+	
+</body>
+</html>
