@@ -1,4 +1,4 @@
-FROM node:last
+FROM node:latest
 
 MAINTAINER Shang Sinian <shangsinian@gmail.com>
 
